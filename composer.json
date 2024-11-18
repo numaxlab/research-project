@@ -1,0 +1,36 @@
+{
+    "name": "numaxlab/research-project",
+    "description": "Paquete web base para proxectos de investgación",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Numaxlab\\ResearchProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Noa García Amado",
+            "email": "noa@numax.org"
+        },
+        {
+            "name": "Adrián Pardella Blunier",
+            "email": "adrian@numax.org"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NumaxLab\\ResearchProject\\Providers\\ResearchProjectServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.2",
+        "backpack/crud": "^6.4",
+        "spatie/laravel-translatable": "^6.6",
+        "cviebrock/eloquent-sluggable": "^10.0",
+        "backpack/filemanager": "^3.0"
+    }
+}
