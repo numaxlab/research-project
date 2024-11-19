@@ -30,7 +30,7 @@
         "php": "^8.2",
         "backpack/crud": "^6.4",
         "spatie/laravel-translatable": "^6.6",
-        "cviebrock/eloquent-sluggable": "^10.0",
+        "cviebrock/eloquent-sluggable": "^11.0",
         "backpack/filemanager": "^3.0"
     }
 }
