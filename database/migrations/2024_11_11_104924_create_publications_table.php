@@ -16,12 +16,14 @@ return new class extends Migration {
             $table->json('description')->nullable();
             $table->integer('year')->nullable();
             $table->string('pdf_file')->nullable();
+            $table->string('url')->nullable();
             $table->json('slug');
             $table->boolean('is_public');
             $table->integer('parent_id')->nullable()->default(0);
             $table->integer('lft')->default(0);
             $table->integer('rgt')->default(0);
             $table->integer('depth')->default(0);
+            $table->string('publication_type');
             $table->unsignedBigInteger('project_id');
 
             $table->foreign('project_id')

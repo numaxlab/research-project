@@ -5,6 +5,7 @@ namespace NumaxLab\ResearchProject\Http\Controllers\Admin;
 use App\Http\Requests\PublicationRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use NumaxLab\ResearchProject\Models\Publication;
 
 /**
  * Class PublicationCrudController
@@ -91,6 +92,7 @@ class PublicationCrudController extends CrudController
             'title' => 'required',
             'project' => 'required',
         ]);
+        // Widget::add()->type('script')->content('/../../../assets/js/admin/publication.js');
 
         CRUD::addField([
             'name' => 'project',
@@ -124,7 +126,16 @@ class PublicationCrudController extends CrudController
             'type' => 'number'
         ]);
 
+        CRUD::addField([
+            'name' => 'publication_type',
+            'label' => 'Tipo de publicación',
+            'type' => 'select_from_array',
+            'options' => [
+                Publication::TYPE_FILE => 'Arquivo',
+                Publication::TYPE_URL => 'Ligazón',
 
+            ],
+        ]);
         CRUD::addField([
             'name' => 'pdf_file',
             'label' => 'Arquivo PDF',
@@ -133,6 +144,12 @@ class PublicationCrudController extends CrudController
                 'disk' => 'public',
                 'path' => 'publicacions',
             ],
+        ]);
+
+        CRUD::addField([
+            'name' => 'url',
+            'label' => 'Ligazón',
+            'type' => 'text'
         ]);
 
 

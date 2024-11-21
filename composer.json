@@ -28,8 +28,8 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^8.2",
-        "backpack/crud": "^6.4",
-        "spatie/laravel-translatable": "^6.6",
+        "backpack/crud": "^6.7",
+        "spatie/laravel-translatable": "^6.8",
         "cviebrock/eloquent-sluggable": "^11.0",
         "backpack/filemanager": "^3.0"
     }

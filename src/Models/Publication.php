@@ -16,6 +16,9 @@ class Publication extends Model
     use CrudTrait;
 
 
+    public const TYPE_FILE = 'file';
+    public const TYPE_URL = 'url';
+
     protected $fillable = [
         'title',
         'description',
@@ -23,7 +26,9 @@ class Publication extends Model
         'pdf_file',
         'project_id',
         'slug',
-        'is_public'
+        'is_public',
+        'publication_type',
+        'url'
     ];
 
 
