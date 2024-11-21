@@ -16,13 +16,12 @@ class ResearchProjectServiceProvider extends ServiceProvider
 
         ]);
         $this->loadRoutesFrom(__DIR__ . '/../../routes/research-project.php');
-        /*  $this->publishesMigrations([
-              __DIR__ . '/../../database/migrations' => database_path('migrations'),
-          ]);*/
+        $this->publishesMigrations([
+            __DIR__ . '/../../database/migrations' => database_path('migrations'),
+        ]);
 
-        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        //  $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
-        //pq load e non publishes
 
         $this->loadTranslationsFrom(__DIR__ . '/../../lang', 'research-project');
 
