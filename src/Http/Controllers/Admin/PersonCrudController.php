@@ -130,6 +130,14 @@ class PersonCrudController extends CrudController
             'type' => 'text'
         ]);
 
+
+        CRUD::addField([
+            'name' => 'phone_number',
+            'label' => 'Número de teléfono',
+            'type' => 'text'
+        ]);
+
+
         CRUD::addField([
             'name' => 'biography',
             'label' => 'Biografía',
