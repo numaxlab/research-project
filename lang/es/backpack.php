@@ -5,27 +5,30 @@ return [
     'models' => [
         'category' => 'Categoría',
         'categories' => 'Categorías',
-        'person' => 'Persoa',
-        'people' => 'Persoas',
+        'person' => 'Persona',
+        'people' => 'Personas',
         'publication' => 'Publicación',
-        'publications' => 'Publicacións',
-        'research_line' => 'Liña de Investigación',
-        'research_lines' => 'Liñas de Investigación',
-        'research_project' => 'Proxecto de Investigación',
-        'research_projects' => 'Proxectos de Investigación',
+        'publications' => 'Publicaciones',
+        'research_line' => 'Línea de Investigación',
+        'research_lines' => 'Líneas de Investigación',
+        'research_project' => 'Proyecto de Investigación',
+        'research_projects' => 'Proyectos de Investigación',
     ],
 
     'labels' => [
-        'name' => 'Nome',
+        'name' => 'Nombre',
         'photo' => 'Fotografía',
         'email' => 'Correo electrónico',
         'is_public_m' => 'Público',
         'is_public_f' => 'Pública',
+        'title' => 'Titulo',
+        'init_date' => 'Fecha de inicio',
+        'final_date' => 'Fecha finalización',
 
         //biografia
     ],
 
-    'title' => 'Titulo',
+
     'content' => 'Contido',
     'name' => 'Nome',
     'description' => 'Descrición',
@@ -76,55 +79,4 @@ return [
     'media' => 'Medio',
 
 
-    'address' => [
-        'label' => 'Dirección',
-        'street' => 'Rúa',
-        'postal_code' => 'Código Postal',
-        'number' => 'Número',
-        'floor' => 'Piso',
-        'city' => 'Cidade',
-        'province' => 'Provincia',
-        'coordinates' => 'Coordenadas',
-        'latitude' => 'Latitude',
-        'longitude' => 'Lonxitude',
-    ],
-
-    'projects_status' => [
-        'development' => 'Desenvolvemento',
-        'production' => 'Produción',
-        'postproduction' => 'Postprodución',
-        'distribution' => 'Distribución'
-    ],
-
-    'projects_types' => [
-        'feature_film' => 'Largometraxe',
-        'short_film' => 'Curtametraxe',
-        'other' => 'Outro'
-    ],
-
-    'default_project_tech_info' => [
-        'release_date' => 'Data de estrea',
-        'gender' => 'Xénero',
-        'format' => 'Formato',
-        'production_country' => 'País de produción principal',
-        'languages' => 'Idiomas',
-        'color' => 'Cor',
-        'resolution' => 'Resolución',
-        'aspect_ration' => 'Relación de aspecto',
-        'audio' => 'Son',
-    ],
-
-    'default_project_artistic_info' => [
-        'direction' => 'Direción',
-        'script' => 'Guión',
-        'interpreters' => 'Intérpteses',
-        'photo' => 'Fotografía',
-        'assembly' => 'Montaxe',
-        'art_direction' => 'Dirección de arte',
-        'audio' => 'Son',
-        'music' => 'Música',
-        'production' => 'Produtora',
-        'production_direction' => 'Direción de produción',
-        'distribution' => 'Distribución',
-    ]
 ];

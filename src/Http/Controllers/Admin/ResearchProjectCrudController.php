@@ -46,7 +46,7 @@ class ResearchProjectCrudController extends CrudController
 
         CRUD::addColumn([
             'name' => 'title',
-            'label' => 'Título',
+            'label' => __('research-project::backpack.labels.title'),
             'type' => 'text'
         ]);
 
@@ -54,20 +54,20 @@ class ResearchProjectCrudController extends CrudController
         CRUD::addColumn([
             'name' => 'research_lines',
             'type' => "relationship",
-            'label' => 'Liña de investigación',
+            'label' => __('research-project::backpack.models.research_line')
 
         ]);
 
         CRUD::addColumn([
             'name' => 'init_date',
-            'label' => 'Data inicio',
+            'label' => __('research-project::backpack.labels.init_date'),
             'type' => 'date',
             'wrapper' => ['class' => 'form-group col-md-6']
 
         ]);
         CRUD::addColumn([
             'name' => 'final_date',
-            'label' => 'Data finalización',
+            'label' => __('research-project::backpack.labels.final_date'),
             'type' => 'date',
             'wrapper' => ['class' => 'form-group col-md-6']
 
@@ -76,7 +76,7 @@ class ResearchProjectCrudController extends CrudController
 
         CRUD::addColumn([
             'name' => 'is_public',
-            'label' => 'Público',
+            'label' => __('research-project::backpack.labels.is_public_m'),
             'type' => 'checkbox'
         ]);
     }
@@ -108,7 +108,7 @@ class ResearchProjectCrudController extends CrudController
         CRUD::addField([
             'name' => 'research_lines',
             'type' => "relationship",
-            'label' => 'Liñas de investigación',
+            'label' => __('research-project::backpack.models.research_line')
 
         ]);
 

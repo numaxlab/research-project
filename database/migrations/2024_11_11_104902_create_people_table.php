@@ -17,6 +17,8 @@ return new class extends Migration {
 
             $table->string('photo_path')->nullable();
             $table->string('email')->nullable();
+            $table->string('phone_number')->nullable();
+
             $table->json('web_profiles')->nullable();
             $table->json('biography')->nullable();
             $table->string('cv_file')->nullable();
