@@ -95,6 +95,7 @@ class PersonCrudController extends CrudController
     {
         CRUD::setValidation([
             'name' => 'required|min:2',
+            'category_id' => 'required|min:2',
         ]);
 
         CRUD::addField([
