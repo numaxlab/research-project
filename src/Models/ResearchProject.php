@@ -46,6 +46,43 @@ class ResearchProject extends Model
 
     protected $casts = ['financiers' => 'array', 'documents' => 'array', 'videos' => 'array', 'images' => 'array'];
 
+
+    public function getFinanciersAsArrayAttribute()
+    {
+        if ($this->financiers) {
+            return json_decode($this->financiers, true);
+        }
+
+        return [];
+    }
+
+    public function getDocumentsAsArrayAttribute()
+    {
+        if ($this->documents) {
+            return json_decode($this->documents, true);
+        }
+
+        return [];
+    }
+
+    public function getVideosAsArrayAttribute()
+    {
+        if ($this->videos) {
+            return json_decode($this->videos, true);
+        }
+
+        return [];
+    }
+
+    public function getImagesAsArrayAttribute()
+    {
+        if ($this->images) {
+            return json_decode($this->images, true);
+        }
+
+        return [];
+    }
+
     public function people(): belongsToMany
     {
         return $this->belongsToMany(
