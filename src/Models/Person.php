@@ -33,7 +33,7 @@ class Person extends Model
         'cv_file',
         'slug',
         'is_public',
-        'category_id' .
+        'category_id',
         'phone_number'
     ];
 
