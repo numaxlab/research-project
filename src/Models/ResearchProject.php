@@ -44,7 +44,14 @@ class ResearchProject extends Model
         'slug'
     ];
 
-    protected $casts = ['financiers' => 'array', 'documents' => 'array', 'videos' => 'array', 'images' => 'array'];
+    protected $casts = [
+        'financiers' => 'array',
+        'documents' => 'array',
+        'videos' => 'array',
+        'images' => 'array',
+        'init_date' => 'date',
+        'final_date' => 'date',
+    ];
 
 
     public function getFinanciersAsArrayAttribute()

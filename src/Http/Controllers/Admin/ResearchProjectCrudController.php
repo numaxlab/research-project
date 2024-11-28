@@ -102,6 +102,8 @@ class ResearchProjectCrudController extends CrudController
     {
         CRUD::setValidation([
             'title' => 'required',
+            'init_date' => 'required',
+            'final_date' => 'required',
         ]);
 
 
@@ -135,7 +137,8 @@ class ResearchProjectCrudController extends CrudController
         CRUD::addField([
             'name' => 'long_description',
             'label' => 'Descrición longa',
-            'type' => 'wysiwyg'
+            'type' => 'ckeditor',
+            'elfinderOptions' => true,
         ]);
 
         CRUD::addField([
