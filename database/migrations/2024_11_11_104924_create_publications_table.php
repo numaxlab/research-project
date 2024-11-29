@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('title');
             $table->json('description')->nullable();
+            $table->json('tech_info')->nullable();
             $table->integer('year')->nullable();
             $table->string('pdf_file')->nullable();
             $table->string('url')->nullable();

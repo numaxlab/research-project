@@ -136,6 +136,8 @@ class PublicationCrudController extends CrudController
 
             ],
         ]);
+
+
         CRUD::addField([
             'name' => 'pdf_file',
             'label' => 'Arquivo PDF',
@@ -150,6 +152,34 @@ class PublicationCrudController extends CrudController
             'name' => 'url',
             'label' => 'Ligazón',
             'type' => 'text'
+        ]);
+
+
+        CRUD::addfield([
+            'name' => 'tech_info',
+            'label' => 'Ficha técnica',
+            'type' => 'repeatable',
+            'subfields' => [
+                [
+                    'name' => 'key',
+                    'label' => 'Clave',
+                    'type' => 'text',
+                    'wrapper' => [
+                        'class' => 'col-md-6',
+                    ],
+                ],
+                [
+                    'name' => 'value',
+                    'type' => 'text',
+                    'label' => 'Valor',
+                    'wrapper' => [
+                        'class' => 'col-md-6',
+                    ],
+
+                ],
+            ],
+            'init_rows' => 1,
+            'min_rows' => 1
         ]);
 
 

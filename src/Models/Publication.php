@@ -28,11 +28,15 @@ class Publication extends Model
         'slug',
         'is_public',
         'publication_type',
-        'url'
+        'url',
+        'tech_info'
     ];
 
 
-    protected $translatable = ['description', 'slug'];
+    protected $translatable = ['description', 'slug', 'tech_info'];
+
+    protected $casts = ['tech_info' => 'array'];
+
 
     public function people(): BelongsToMany
     {
