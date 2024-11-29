@@ -84,5 +84,14 @@ class Person extends Model
         ];
     }
 
+    public function getWebProfilesAsArrayAttribute()
+    {
+        if ($this->web_profiles) {
+            return json_decode($this->web_profiles, true);
+        }
+
+        return [];
+    }
+
 
 }
