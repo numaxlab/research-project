@@ -38,6 +38,15 @@ class Publication extends Model
     protected $casts = ['tech_info' => 'array'];
 
 
+    public function getTechInfoAsArray()
+    {
+        if ($this->tech_info) {
+            return json_decode($this->tech_info, true);
+        }
+
+        return [];
+    }
+
     public function people(): BelongsToMany
     {
         return $this->belongsToMany(Person::class, 'publication_person');
