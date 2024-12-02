@@ -87,6 +87,7 @@ class ResearchProjectCrudController extends CrudController
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */
+
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
@@ -228,11 +229,11 @@ class ResearchProjectCrudController extends CrudController
         ]);
         CRUD::addField([
             'name' => 'images',
-            'label' => 'Documentos',
+            'label' => 'Imaxes',
             'type' => 'repeatable',
             'subfields' => [
                 [
-                    'name' => 'logo',
+                    'name' => 'src',
                     'label' => 'Imaxe',
                     'type' => 'browse',
 
