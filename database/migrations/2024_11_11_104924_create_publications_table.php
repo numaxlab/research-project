@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->integer('year')->nullable();
             $table->string('pdf_file')->nullable();
             $table->string('url')->nullable();
-            $table->json('slug');
+            $table->string('slug');
             $table->boolean('is_public');
             $table->integer('parent_id')->nullable()->default(0);
             $table->integer('lft')->default(0);
