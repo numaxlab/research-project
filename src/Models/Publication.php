@@ -33,7 +33,7 @@ class Publication extends Model
     ];
 
 
-    protected $translatable = ['description', 'slug', 'tech_info'];
+    protected $translatable = ['description', 'tech_info'];
 
     protected $casts = ['tech_info' => 'array'];
 
