@@ -96,6 +96,8 @@ class PersonCrudController extends CrudController
         CRUD::setValidation([
             'name' => 'required|min:2',
             'category' => 'required',
+            'photo_path' => 'required'
+
         ]);
 
         CRUD::addField([

@@ -105,6 +105,7 @@ class ResearchProjectCrudController extends CrudController
             'title' => 'required',
             'init_date' => 'required',
             'final_date' => 'required',
+            'main_image' => 'required'
         ]);
 
 
