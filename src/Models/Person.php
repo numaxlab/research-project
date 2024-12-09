@@ -40,7 +40,6 @@ class Person extends Model
     protected $translatable = [
         'function',
         'biography',
-        'slug',
     ];
 
     protected $casts = ['web_profiles' => 'array'];
