@@ -79,6 +79,7 @@ class ResearchLineCrudController extends CrudController
     {
         CRUD::setValidation([
             'name' => 'required',
+            'slug' => 'required',
         ]);
         CRUD::addField([
             'name' => 'name',

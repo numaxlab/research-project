@@ -41,7 +41,7 @@ class ResearchProject extends Model
         'slug',
         'images',
         'videos',
-        'slug'
+        'slug',
     ];
 
     protected $casts = [
