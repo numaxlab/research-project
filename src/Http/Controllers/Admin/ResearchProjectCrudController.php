@@ -105,7 +105,8 @@ class ResearchProjectCrudController extends CrudController
             'title' => 'required',
             'init_date' => 'required',
             'final_date' => 'required',
-            'main_image' => 'required'
+            'main_image' => 'required',
+            'long_description' => 'required'
         ]);
 
 
@@ -217,12 +218,7 @@ class ResearchProjectCrudController extends CrudController
                 [
                     'name' => 'file',
                     'label' => 'Arquivo',
-                    'type' => 'upload',
-                    'withFiles' => [
-                        'disk' => 'public',
-                        'path' => 'proxectos/documentos',
-                    ],
-
+                    'type' => 'browse',
 
                 ]
             ],
@@ -285,11 +281,7 @@ class ResearchProjectCrudController extends CrudController
                 [
                     'name' => 'logo',
                     'label' => 'Logo',
-                    'type' => 'image',
-                    'withFiles' => [
-                        'disk' => 'public',
-                        'path' => 'financiadores',
-                    ],
+                    'type' => 'browse',
 
 
                 ],
