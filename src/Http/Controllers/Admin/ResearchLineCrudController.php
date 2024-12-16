@@ -46,14 +46,14 @@ class ResearchLineCrudController extends CrudController
 
         CRUD::addColumn([
             'name' => 'name',
-            'label' => 'Nome',
+            'label' => __('research-project::backpack.labels.name'),
             'type' => 'text'
         ]);
 
 
         CRUD::addColumn([
             'name' => 'is_public',
-            'label' => 'Pública',
+            'label' => __('research-project::backpack.labels.is_public_f'),
             'type' => 'checkbox'
         ]);
     }
@@ -83,7 +83,7 @@ class ResearchLineCrudController extends CrudController
         ]);
         CRUD::addField([
             'name' => 'name',
-            'label' => 'Nome',
+            'label' => __('research-project::backpack.labels.name'),
             'type' => 'text'
         ]);
 
@@ -96,19 +96,19 @@ class ResearchLineCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'short_description',
-            'label' => 'Descripción curta',
+            'label' => __('research-project::backpack.labels.short_description'),
             'type' => 'textarea'
         ]);
         CRUD::addField([
             'name' => 'long_description',
-            'label' => 'Descripción longa',
+            'label' => __('research-project::backpack.labels.long_description'),
             'type' => 'wysiwyg'
         ]);
 
         CRUD::addField([
             'name' => 'projects',
             'type' => "relationship",
-            'label' => 'Proxectos',
+            'label' => __('research-project::backpack.models.research_projects'),
 
         ]);
 
@@ -116,14 +116,14 @@ class ResearchLineCrudController extends CrudController
         CRUD::addField([
             'name' => 'people',
             'type' => "relationship",
-            'label' => 'Persoas',
+            'label' => __('research-project::backpack.models.people'),
 
         ]);
 
 
         CRUD::addField([
             'name' => 'is_public',
-            'label' => 'Pública',
+            'label' => __('research-project::backpack.labels.is_public_f'),
             'type' => 'checkbox'
         ]);
     }

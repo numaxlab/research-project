@@ -47,24 +47,24 @@ class PublicationCrudController extends CrudController
         CRUD::addColumn([
             'name' => 'project',
             'type' => "relationship",
-            'label' => 'Proxecto',
+            'label' => __('research-project::backpack.models.research_project'),
 
         ]);
         CRUD::addColumn([
             'name' => 'title',
-            'label' => 'Título',
+            'label' => __('research-project::backpack.labels.title'),
             'type' => 'text'
         ]);
         CRUD::addColumn([
             'name' => 'year',
-            'label' => 'Ano',
+            'label' => __('research-project::backpack.labels.year'),
             'type' => 'number'
         ]);
 
 
         CRUD::addColumn([
             'name' => 'is_public',
-            'label' => 'Pública',
+            'label' => __('research-project::backpack.labels.is_public_f'),
             'type' => 'checkbox'
         ]);
     }
@@ -97,12 +97,12 @@ class PublicationCrudController extends CrudController
         CRUD::addField([
             'name' => 'project',
             'type' => "relationship",
-            'label' => 'Proxecto',
+            'label' => __('research-project::backpack.models.research_project'),
 
         ]);
         CRUD::addField([
             'name' => 'title',
-            'label' => 'Título',
+            'label' => __('research-project::backpack.labels.title'),
             'type' => 'text'
         ]);
 
@@ -116,19 +116,19 @@ class PublicationCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'description',
-            'label' => 'Descripción',
+            'label' => __('research-project::backpack.labels.description'),
             'type' => 'wysiwyg'
         ]);
 
         CRUD::addField([
             'name' => 'year',
-            'label' => 'Ano',
+            'label' => __('research-project::backpack.labels.year'),
             'type' => 'number'
         ]);
 
         CRUD::addField([
             'name' => 'publication_type',
-            'label' => 'Tipo de publicación',
+            'label' => __('research-project::backpack.labels.publication_type'),
             'type' => 'select_from_array',
             'options' => [
                 Publication::TYPE_FILE => 'Arquivo',
@@ -144,25 +144,25 @@ class PublicationCrudController extends CrudController
             'type' => 'upload',
             'withFiles' => [
                 'disk' => 'public',
-                'path' => 'publicacions',
+                'path' => __('research-project::backpack.folders.publications'),
             ],
         ]);
 
         CRUD::addField([
             'name' => 'url',
-            'label' => 'Ligazón',
+            'label' => __('research-project::backpack.labels.url'),
             'type' => 'text'
         ]);
 
 
         CRUD::addfield([
             'name' => 'tech_info',
-            'label' => 'Ficha técnica',
+            'label' => __('research-project::backpack.labels.tech_info'),
             'type' => 'repeatable',
             'subfields' => [
                 [
                     'name' => 'key',
-                    'label' => 'Clave',
+                    'label' => __('research-project::backpack.labels.key'),
                     'type' => 'text',
                     'wrapper' => [
                         'class' => 'col-md-6',
@@ -171,7 +171,7 @@ class PublicationCrudController extends CrudController
                 [
                     'name' => 'value',
                     'type' => 'text',
-                    'label' => 'Valor',
+                    'label' => __('research-project::backpack.labels.value'),
                     'wrapper' => [
                         'class' => 'col-md-6',
                     ],
@@ -186,14 +186,14 @@ class PublicationCrudController extends CrudController
         CRUD::addField([
             'name' => 'people',
             'type' => "relationship",
-            'label' => 'Persoas',
+            'label' => __('research-project::backpack.models.people'),
 
         ]);
 
 
         CRUD::addField([
             'name' => 'is_public',
-            'label' => 'Pública',
+            'label' => __('research-project::backpack.labels.is_public_f'),
             'type' => 'checkbox'
         ]);
     }

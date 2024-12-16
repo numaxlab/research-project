@@ -119,7 +119,7 @@ class ResearchProjectCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'title',
-            'label' => 'Título',
+            'label' => __('research-project::backpack.labels.title'),
             'type' => 'text'
         ]);
 
@@ -132,21 +132,21 @@ class ResearchProjectCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'introduction',
-            'label' => 'Introducción',
+            'label' => __('research-project::backpack.labels.introduction'),
             'type' => 'textarea'
         ]);
 
 
         CRUD::addField([
             'name' => 'long_description',
-            'label' => 'Descrición longa',
+            'label' => __('research-project::backpack.labels.long_description'),
             'type' => 'ckeditor',
             'elfinderOptions' => true,
         ]);
 
         CRUD::addField([
             'name' => 'main_image',
-            'label' => 'Imaxe principal',
+            'label' => __('research-project::backpack.labels.image'),
             'type' => 'image',
             'withFiles' => [
                 'disk' => 'public',
@@ -155,14 +155,14 @@ class ResearchProjectCrudController extends CrudController
         ]);
         CRUD::addField([
             'name' => 'init_date',
-            'label' => 'Data inicio',
+            'label' => __('research-project::backpack.labels.init_date'),
             'type' => 'date',
             'wrapper' => ['class' => 'form-group col-md-6']
 
         ]);
         CRUD::addField([
             'name' => 'final_date',
-            'label' => 'Data finalización (se a ten)',
+            'label' => __('research-project::backpack.labels.final_date'),
             'type' => 'date',
             'wrapper' => ['class' => 'form-group col-md-6']
 
@@ -172,14 +172,14 @@ class ResearchProjectCrudController extends CrudController
         CRUD::addField([
             'name' => 'publications',
             'type' => "relationship",
-            'label' => 'Publications',
-            'tab' => 'Publicacións'
+            'label' => __('research-project::backpack.models.publications'),
+            'tab' => __('research-project::backpack.models.publications'),
         ]);
 
         CRUD::addfield([
             'name' => 'people',
             'type' => "relationship",
-            'label' => 'Persoas',
+            'label' => __('research-project::backpack.models.people'),
 
             'subfields' => [
                 [
@@ -194,30 +194,30 @@ class ResearchProjectCrudController extends CrudController
                     ]
                 ],
             ],
-            'tab' => 'Participantes'
+            'tab' => __('research-project::backpack.models.people'),
         ]);
 
         CRUD::addField([
             'name' => 'is_public',
-            'label' => 'Público',
+            'label' => __('research-project::backpack.labels.is_public_m'),
             'type' => 'checkbox'
         ]);
 
 
         CRUD::addField([
             'name' => 'documents',
-            'label' => 'Documentos',
+            'label' => __('research-project::backpack.labels.documents'),
             'type' => 'repeatable',
             'subfields' => [
                 [
                     'name' => 'name',
                     'type' => 'text',
-                    'label' => 'Nome',
+                    'label' => __('research-project::backpack.labels.name'),
 
                 ],
                 [
                     'name' => 'file',
-                    'label' => 'Arquivo',
+                    'label' => __('research-project::backpack.labels.file'),
                     'type' => 'browse',
 
                 ]
@@ -226,19 +226,19 @@ class ResearchProjectCrudController extends CrudController
         ]);
         CRUD::addField([
             'name' => 'images',
-            'label' => 'Imaxes',
+            'label' => __('research-project::backpack.labels.images'),
             'type' => 'repeatable',
             'subfields' => [
                 [
                     'name' => 'src',
-                    'label' => 'Imaxe',
+                    'label' => __('research-project::backpack.labels.images'),
                     'type' => 'browse',
 
                 ],
                 [
                     'name' => 'caption',
                     'type' => 'text',
-                    'label' => 'Pé de foto',
+                    'label' => __('research-project::backpack.labels.caption'),
 
                 ],
             ],
@@ -247,18 +247,18 @@ class ResearchProjectCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'videos',
-            'label' => 'Vídeos',
+            'label' => __('research-project::backpack.labels.videos'),
             'type' => 'repeatable',
             'subfields' => [
                 [
                     'name' => 'title',
-                    'label' => 'Título',
+                    'label' => __('research-project::backpack.labels.name'),
                     'type' => 'text',
 
                 ],
                 [
                     'name' => 'embed',
-                    'label' => 'Código do vídeo',
+                    'label' => __('research-project::backpack.labels.embed'),
                     'type' => 'textarea',
 
                 ],
@@ -269,13 +269,13 @@ class ResearchProjectCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'financiers',
-            'label' => 'Entidades financiadoras',
+            'label' => __('research-project::backpack.labels.sponsors'),
             'type' => 'repeatable',
             'subfields' => [
                 [
                     'name' => 'name',
                     'type' => 'text',
-                    'label' => 'Nome',
+                    'label' => __('research-project::backpack.labels.name'),
 
                 ],
                 [
@@ -288,22 +288,22 @@ class ResearchProjectCrudController extends CrudController
                 [
                     'name' => 'url',
                     'type' => 'text',
-                    'label' => 'Enlace',
+                    'label' => __('research-project::backpack.labels.url'),
 
                 ],
             ],
-            'tab' => 'Financiamiento'
+            'tab' => __('research-project::backpack.tabs.funding'),
         ]);
 
         CRUD::addField([
             'name' => 'amount',
-            'label' => 'Cantidade',
+            'label' => __('research-project::backpack.labels.amount'),
             'type' => 'number',
             'suffix' => ' €',
             'decimals' => 2,
             'dec_point' => ',',
             'thousands_sep' => '.',
-            'tab' => 'Financiamiento',
+            'tab' => __('research-project::backpack.tabs.funding'),
         ]);
     }
 

@@ -17,6 +17,10 @@ class Category extends Model
     protected $fillable = ['name'];
     protected $translatable = ['name'];
 
+    public function sortedPeople(): HasMany
+    {
+        return $this->people()->orderBy('lft');
+    }
 
     public function people(): HasMany
     {

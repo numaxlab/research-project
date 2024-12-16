@@ -123,7 +123,7 @@ class PersonCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'function',
-            'label' => 'Función',
+            'label' => __('research-project::backpack.labels.function'),
             'type' => 'text'
         ]);
 
@@ -136,40 +136,40 @@ class PersonCrudController extends CrudController
 
         CRUD::addField([
             'name' => 'phone_number',
-            'label' => 'Número de teléfono',
+            'label' => __('research-project::backpack.labels.phone_number'),
             'type' => 'text'
         ]);
 
 
         CRUD::addField([
             'name' => 'biography',
-            'label' => 'Biografía',
+            'label' => __('research-project::backpack.labels.biography'),
             'type' => 'wysiwyg'
         ]);
 
         CRUD::addField([
             'name' => 'photo_path',
-            'label' => 'Foto',
+            'label' => __('research-project::backpack.labels.photo'),
             'type' => 'image',
             'withFiles' => [
                 'disk' => 'public',
-                'path' => 'persoas',
+                'path' => __('research-project::backpack.folders.people'),
             ],
         ]);
         CRUD::addField([
             'name' => 'web_profiles',
-            'label' => 'Perfís na web',
+            'label' => __('research-project::backpack.labels.web_profiles'),
             'type' => 'repeatable',
             'subfields' => [
                 [
                     'name' => 'platform',
-                    'label' => 'Plataforma do perfil',
+                    'label' => __('research-project::backpack.labels.profile_platform'),
                     'type' => 'text',
 
                 ],
                 [
                     'name' => 'url',
-                    'label' => 'Ligazón ao perfil',
+                    'label' => __('research-project::backpack.labels.profile_url'),
                     'type' => 'text',
 
                 ],
@@ -181,8 +181,8 @@ class PersonCrudController extends CrudController
         CRUD::addField([
             'name' => 'research_lines',
             'type' => "relationship",
-            'label' => 'Liñas de investigación',
-            'tab' => 'Relacións'
+            'label' => __('research-project::backpack.models.research_lines'),
+            'tab' => __('research-project::backpack.tabs.relations'),
 
         ]);
 
@@ -190,7 +190,7 @@ class PersonCrudController extends CrudController
         CRUD::addfield([
             'name' => 'projects',
             'type' => "relationship",
-            'label' => 'Proxectos de investigacion',
+            'label' => __('research-project::backpack.models.research_projects'),
             'subfields' => [
                 [
                     'name' => 'rol',
@@ -203,21 +203,21 @@ class PersonCrudController extends CrudController
                     ]
                 ],
             ],
-            'tab' => 'Relacións'
+            'tab' => __('research-project::backpack.tabs.relations'),
 
         ]);
         CRUD::addField([
             'name' => 'publications',
             'type' => "relationship",
-            'label' => 'Publications',
-            'tab' => 'Relacións'
+            'label' => __('research-project::backpack.models.publications'),
+            'tab' => __('research-project::backpack.tabs.relations'),
 
 
         ]);
 
         CRUD::addField([
             'name' => 'is_public',
-            'label' => 'Pública',
+            'label' => __('research-project::backpack.labels.is_public_f'),
             'type' => 'checkbox'
         ]);
     }
